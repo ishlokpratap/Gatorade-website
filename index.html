@@ -1,0 +1,374 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Experience Gatorade Blue Electrolyte Energy - Hydration evolved. Discover the science of rapid replenishment with a dynamic scroll-driven visual showcase.">
+  <title>Gatorade Blue - Electrolyte Energy | Hydration Evolved</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Space+Grotesk:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <!-- Preloader Screen -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <div class="gatorade-bolt">
+        <svg viewBox="0 0 100 150" class="bolt-svg">
+          <polygon points="60,0 10,80 50,80 30,150 90,60 50,60" fill="none" stroke="#ff6b00" stroke-width="4" />
+          <polygon points="60,0 10,80 50,80 30,150 90,60 50,60" fill="#00f2fe" class="bolt-fill" />
+        </svg>
+      </div>
+      <h2 class="preloader-title">GATORADE <span class="blue-text">BLUE</span></h2>
+      <p class="preloader-subtitle">Loading Hydro-Animation</p>
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="progress-text" id="progress-text">0%</div>
+    </div>
+  </div>
+  <!-- Main Web Content -->
+  <main id="main-content" class="hidden">
+
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo">
+        <span class="bolt-icon">⚡</span> GATORADE <span class="blue-text font-accent">BLUE</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#animation-section">Animation</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#science">Science</a>
+        <a href="#specs">Specs</a>
+        <a href="#shop">Shop</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="cart-trigger" id="cart-trigger">
+          <span class="cart-icon-symbol">🛒</span>
+          <span class="cart-badge" id="cart-badge">0</span>
+        </button>
+        <a href="#buy-now" class="nav-cta">Pre-Order Now</a>
+      </div>
+    </header>
+    <!-- Scroll Animation Container -->
+    <section class="scroll-container" id="animation-section">
+      <div class="sticky-wrapper">
+        <canvas id="animation-canvas"></canvas>
+
+        <!-- Fading Text Overlays -->
+        <div class="overlay-text active" id="text-overlay-1">
+          <div class="glass-card text-center animate-fade-in">
+            <span class="badge">Innovation</span>
+            <h1>UNLEASH THE STORM</h1>
+            <p>Introducing the next evolution of performance hydration. Tailored for those who push boundaries.</p>
+            <div class="scroll-prompt">
+              <span>Scroll to Begin</span>
+              <div class="chevron"></div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay-text" id="text-overlay-2">
+          <div class="glass-card left-aligned">
+            <span class="badge badge-orange">Formula</span>
+            <h2>ELECTROLYTES EVOLVED</h2>
+            <p>A precision-balanced matrix of Sodium, Potassium, and essential minerals to combat fatigue at a cellular
+              level.</p>
+          </div>
+        </div>
+        <div class="overlay-text" id="text-overlay-3">
+          <div class="glass-card right-aligned">
+            <span class="badge">Performance</span>
+            <h2>MAXIMUM REPLENISHMENT</h2>
+            <p>Engineered for high-intensity athletes. Absorb fluids up to 40% faster than water alone to maintain peak
+              muscle output.</p>
+          </div>
+        </div>
+        <div class="overlay-text" id="text-overlay-4">
+          <div class="glass-card text-center">
+            <span class="badge badge-blue">Gatorade Blue</span>
+            <h2>THE BLUE STORM IS HERE</h2>
+            <p>Unlock ultimate cognitive and physical drive. Pure energy, rapid hydration, zero compromises.</p>
+            <a href="#benefits" class="btn btn-primary glow-blue">Explore Details</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Product Benefits Grid Section -->
+    <section class="section benefits-section" id="benefits">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">01 / PERFORMANCE HIGHLIGHTS</span>
+          <h2 class="section-title">WHY GATORADE BLUE?</h2>
+          <p class="section-subtitle">Scientifically validated hydration designed to fuel your peak endurance.</p>
+        </div>
+        <div class="grid-3">
+          <div class="benefit-card">
+            <div class="card-icon">⚡</div>
+            <h3>Intense Hydro-Energy</h3>
+            <p>Fast-acting carbohydrates that immediately replenish glycogen stores, giving you instant physical energy
+              when you need it most.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="card-icon">🌀</div>
+            <h3>Electrolyte Surge</h3>
+            <p>Fortified with double the potassium and sodium of standard sports drinks to prevent cramping and maintain
+              fluid balance.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="card-icon">🧪</div>
+            <h3>Osmotic Absorption</h3>
+            <p>Hypotonic formula ensures rapid gastric emptying and instantaneous hydration straight to the bloodstream.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Science Section -->
+    <section class="section science-section" id="science">
+      <div class="container grid-2-equal">
+        <div class="science-visual">
+          <div class="glowing-circle-wrapper">
+            <div class="glowing-circle circle-1"></div>
+            <div class="glowing-circle circle-2"></div>
+            <div class="glowing-circle circle-3"></div>
+            <div class="science-label">
+              <span class="percentage">98%</span>
+              <span class="lbl-text">Hydration Efficiency</span>
+            </div>
+          </div>
+        </div>
+        <div class="science-content">
+          <span class="section-tag">02 / HYDRATION SCIENCE</span>
+          <h2 class="section-title">THE ANATOMY OF REPLENISHMENT</h2>
+          <p class="p-highlight">Sweat drains more than just water. It strips away critical minerals essential for nerve
+            conduction and muscle contractions.</p>
+          <p>Gatorade Blue is synthesized in collaboration with the world's leading sports scientists to match the exact
+            ionic concentration lost in sweat. Our Blue Storm formula helps regulate body temperature, support blood
+            volume, and reduce cardiovascular strain during heavy exertion.</p>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-value">2X</div>
+              <div class="stat-label">Active Electrolytes</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">-35%</div>
+              <div class="stat-label">Recovery Window</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Interactive Specs Section -->
+    <section class="section specs-section" id="specs">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">03 / FORMULATION BREAKDOWN</span>
+          <h2 class="section-title">NUTRITIONAL PROFILE</h2>
+          <p class="section-subtitle">Transparency in sports science. What goes into every bottle of Blue Storm.</p>
+        </div>
+        <div class="specs-wrapper">
+          <div class="specs-selector">
+            <button class="spec-tab active" data-tab="electrolytes">Electrolytes</button>
+            <button class="spec-tab" data-tab="energy">Energy Matrix</button>
+            <button class="spec-tab" data-tab="hydration">Hydration Base</button>
+          </div>
+          <div class="specs-content-wrapper">
+            <div class="spec-tab-content active" id="tab-electrolytes">
+              <div class="spec-detail-grid">
+                <div class="spec-info-card">
+                  <h4>Sodium (Na+)</h4>
+                  <div class="spec-bar-wrapper">
+                    <div class="spec-bar" style="width: 85%;"></div>
+                  </div>
+                  <p>270mg per serving. Stimulates fluid absorption, prevents hyponatremia, and keeps you drinking
+                    during intense sessions.</p>
+                </div>
+                <div class="spec-info-card">
+                  <h4>Potassium (K+)</h4>
+                  <div class="spec-bar-wrapper">
+                    <div class="spec-bar" style="width: 70%;"></div>
+                  </div>
+                  <p>80mg per serving. Supports cellular fluid balance and nerve transmission, guarding against muscle
+                    exhaustion.</p>
+                </div>
+              </div>
+            </div>
+            <div class="spec-tab-content" id="tab-energy">
+              <div class="spec-detail-grid">
+                <div class="spec-info-card">
+                  <h4>Carbohydrates (Carb-Boost)</h4>
+                  <div class="spec-bar-wrapper">
+                    <div class="spec-bar" style="width: 60%;"></div>
+                  </div>
+                  <p>36g of rapid-acting sucrose and glucose. Prevents central fatigue and maintains athletic
+                    performance levels.</p>
+                </div>
+                <div class="spec-info-card">
+                  <h4>Caloric Efficiency</h4>
+                  <div class="spec-bar-wrapper">
+                    <div class="spec-bar" style="width: 40%;"></div>
+                  </div>
+                  <p>140 Calories. Calibrated to supply muscle cells with optimal glucose without causing
+                    gastrointestinal discomfort.</p>
+                </div>
+              </div>
+            </div>
+            <div class="spec-tab-content" id="tab-hydration">
+              <div class="spec-detail-grid">
+                <div class="spec-info-card">
+                  <h4>Osmolality Value</h4>
+                  <div class="spec-bar-wrapper">
+                    <div class="spec-bar" style="width: 90%;"></div>
+                  </div>
+                  <p>Hypotonic (280 mOsm/kg). Matches bodily fluid concentration for instant hydration compared to
+                    hypertonic energy drinks.</p>
+                </div>
+                <div class="spec-info-card">
+                  <h4>Purified Aqua Base</h4>
+                  <div class="spec-bar-wrapper">
+                    <div class="spec-bar" style="width: 95%;"></div>
+                  </div>
+                  <p>Multi-filtered pure spring water base ensuring zero impurities, clean taste, and efficient
+                    micro-nutrient dissolution.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Shop Section -->
+    <section class="section shop-section" id="shop">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">04 / THE SYSTEM</span>
+          <h2 class="section-title">THE GATORADE GEAR</h2>
+          <p class="section-subtitle">Hydration is a system. Equipping your performance with state-of-the-art tools.</p>
+        </div>
+        <div class="grid-3">
+          <div class="benefit-card product-card">
+            <div class="card-icon">🍊</div>
+            <h3>Orange Burst (12-Pack)</h3>
+            <p class="product-price">$24.99</p>
+            <p class="product-desc">Citrus fuel formula optimized for endurance workouts. Same performance science,
+              orange flavor.</p>
+            <button class="btn btn-primary glow-blue add-to-cart-btn" data-id="orange-burst"
+              data-name="Orange Burst (12-Pack)" data-price="24.99">Add to Cart 🛒</button>
+          </div>
+          <div class="benefit-card product-card">
+            <div class="card-icon">🥤</div>
+            <h3>Gatorade GX Shaker</h3>
+            <p class="product-price">$19.99</p>
+            <p class="product-desc">Smart hydration tracking bottle. Glassmorphic sleek casing with ergonomic dual-layer
+              grip.</p>
+            <button class="btn btn-primary glow-blue add-to-cart-btn" data-id="gx-shaker" data-name="Gatorade GX Shaker"
+              data-price="19.99">Add to Cart 🛒</button>
+          </div>
+          <div class="benefit-card product-card">
+            <div class="card-icon">⚡</div>
+            <h3>Lightning Pods (6-Pack)</h3>
+            <p class="product-price">$12.99</p>
+            <p class="product-desc">Hyper-concentrated electrolyte pods. Simply snap into your GX bottle, add water, and
+              unleash.</p>
+            <button class="btn btn-primary glow-blue add-to-cart-btn" data-id="lightning-pods"
+              data-name="Lightning Pods (6-Pack)" data-price="12.99">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Buy Now / CTA Section -->
+    <section class="section buy-section" id="buy-now">
+      <div class="container">
+        <div class="glass-container buy-card">
+          <div class="buy-grid">
+            <div class="buy-image-container">
+              <div class="glowing-orb"></div>
+              <div class="mockup-placeholder">
+                <svg viewBox="0 0 100 200" class="bottle-silhouette">
+                  <path
+                    d="M40,20 C40,20 45,10 50,10 C55,10 60,20 60,20 L62,35 C62,35 68,40 68,48 L68,70 C68,70 65,72 65,76 L65,160 C65,175 60,180 50,180 C40,180 35,175 35,160 L35,76 C35,72 32,70 32,70 L32,48 C32,40 38,35 38,35 Z"
+                    fill="none" stroke="#00f2fe" stroke-width="3" />
+                  <path
+                    d="M40,20 C40,20 45,10 50,10 C55,10 60,20 60,20 L62,35 C62,35 68,40 68,48 L68,70 C68,70 65,72 65,76 L65,160 C65,175 60,180 50,180 C40,180 35,175 35,160 L35,76 C35,72 32,70 32,70 L32,48 C32,40 38,35 38,35 Z"
+                    fill="rgba(0, 114, 255, 0.2)" />
+                  <!-- Fluid level -->
+                  <path d="M36,90 L64,90 L64,160 C64,172 60,177 50,177 C40,177 36,172 36,160 Z" fill="#00f2fe"
+                    opacity="0.6" />
+                  <path d="M40,12 L60,12 L60,18 L40,18 Z" fill="#ff6b00" />
+                </svg>
+              </div>
+            </div>
+            <div class="buy-content">
+              <span class="badge badge-orange">Exclusive Release</span>
+              <h2>EXPERIENCE GATORADE BLUE</h2>
+              <p class="price-tag">$24.99 <span class="per-pack">/ Pack of 12 Bottles</span></p>
+              <p class="description">Secure your shipment of the ultimate performance hydration. Bottles are
+                manufactured using 100% recycled marine-bound plastics.</p>
+              <div class="quantity-selector">
+                <button class="qty-btn" id="qty-minus">-</button>
+                <span class="qty-val" id="qty-val">1</span>
+                <button class="qty-btn" id="qty-plus">+</button>
+              </div>
+              <button class="btn btn-primary btn-large glow-orange" id="add-to-cart-main-btn">Add to Cart ⚡</button>
+              <p class="shipping-info">🚀 Shipping begins next week. Free delivery on orders over $50.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <span class="bolt-icon">⚡</span> GATORADE <span class="blue-text font-accent">BLUE</span>
+          </div>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Safety & Ingredients</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+        <hr class="footer-line">
+        <div class="footer-bottom">
+          <p>&copy; 2026 Gatorade Inc. All rights reserved. This is a premium product showcase landing page.</p>
+          <p>Created for demonstration purposes.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <!-- Cart Sidebar Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>YOUR CART</h3>
+      <button class="cart-close" id="cart-close">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty">Your cart is empty.</div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-summary">
+        <span>Subtotal</span>
+        <span class="cart-total" id="cart-total">$0.00</span>
+      </div>
+      <button class="btn btn-primary btn-large glow-blue" id="cart-checkout-btn">Checkout Now ⚡</button>
+    </div>
+  </div>
+  <!-- JavaScript Code -->
+  <script src="index.js"></script>
+</body>
+
+</html>
